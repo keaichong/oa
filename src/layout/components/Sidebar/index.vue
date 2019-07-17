@@ -89,6 +89,23 @@ export default {
               hasChildren: false
             }
           ]
+        },
+        {
+          title: "组织管理",
+          path: "/organization-management",
+          hasChildren: true,
+          children: [
+            {
+              title: "组织架构",
+              path: "/organization-management/organization-architecture",
+              hasChildren: false
+            },
+            {
+              title: "人员管理",
+              path: "/organization-management/staff-management",
+              hasChildren: false
+            }
+          ]
         }
       ],
       showLogo: true

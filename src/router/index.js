@@ -116,6 +116,27 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/organization-management',
+    component: Layout,
+    redirect: '/organization-management/organization-architecture',
+    meta: { title: '组织管理' },
+    children: [
+      {
+        path: 'organization-architecture',
+        name: 'organization-architecture',
+        component: () => import('@/views/organization-architecture/index'),
+        meta: { title: '组织架构' }
+      },
+      {
+        path: 'staff-management',
+        name: 'organization-staffManagement',
+        component: () => import('@/views/staff-management/index'),
+        meta: { title: '人员管理' }
+      },
+    ]
+  }
+  ,
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
