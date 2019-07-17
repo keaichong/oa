@@ -1,0 +1,3092 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>权限管理——角色管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/权限管理——角色管理/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/权限管理——角色管理/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u64" class="ax_default label">
+        <div id="u64_div" class=""></div>
+        <div id="u64_text" class="text ">
+          <p><span>默认角色</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u65" class="ax_default line">
+        <img id="u65_img" class="img " src="images/权限管理——角色管理/u65.png"/>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u66" class="ax_default" data-left="40" data-top="128" data-width="1250" data-height="47">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u67" class="ax_default box_1">
+          <div id="u67_div" class=""></div>
+        </div>
+
+        <!-- 序号 (矩形) -->
+        <div id="u68" class="ax_default label" data-label="序号">
+          <div id="u68_div" class=""></div>
+          <div id="u68_text" class="text ">
+            <p><span>1</span></p>
+          </div>
+        </div>
+
+        <!-- 角色名称 (矩形) -->
+        <div id="u69" class="ax_default label" data-label="角色名称">
+          <div id="u69_div" class=""></div>
+          <div id="u69_text" class="text ">
+            <p><span>主管理员</span></p>
+          </div>
+        </div>
+
+        <!-- 角色描述 (矩形) -->
+        <div id="u70" class="ax_default label" data-label="角色描述">
+          <div id="u70_div" class=""></div>
+          <div id="u70_text" class="text ">
+            <p><span>该角色为默认角色，不可修改和删除，拥有后台管理全部权限</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u71" class="ax_default box_1">
+        <div id="u71_div" class=""></div>
+        <div id="u71_text" class="text ">
+          <p><span>查看用户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u72" class="ax_default box_1">
+        <div id="u72_div" class=""></div>
+        <div id="u72_text" class="text ">
+          <p><span>查看权限</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u73" class="ax_default box_1">
+        <div id="u73_div" class=""></div>
+        <div id="u73_text" class="text ">
+          <p><span>更换用户</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u74" class="ax_default label">
+        <div id="u74_div" class=""></div>
+        <div id="u74_text" class="text ">
+          <p><span>自定义角色</span></p>
+        </div>
+      </div>
+
+      <!-- 默认角色 (组 合) -->
+      <div id="u75" class="ax_default" data-label="默认角色" data-left="40" data-top="81" data-width="1250" data-height="47">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u76" class="ax_default box_1">
+          <div id="u76_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u77" class="ax_default label">
+          <div id="u77_div" class=""></div>
+          <div id="u77_text" class="text ">
+            <p><span>序号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u78" class="ax_default label">
+          <div id="u78_div" class=""></div>
+          <div id="u78_text" class="text ">
+            <p><span>角色名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u79" class="ax_default label">
+          <div id="u79_div" class=""></div>
+          <div id="u79_text" class="text ">
+            <p><span>角色描述</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u80" class="ax_default label">
+          <div id="u80_div" class=""></div>
+          <div id="u80_text" class="text ">
+            <p><span>操作</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u81" class="ax_default line">
+        <img id="u81_img" class="img " src="images/权限管理——角色管理/u65.png"/>
+      </div>
+
+      <!-- 默认角色 (组 合) -->
+      <div id="u82" class="ax_default" data-label="默认角色" data-left="40" data-top="430" data-width="1250" data-height="235">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u83" class="ax_default box_1">
+          <div id="u83_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u84" class="ax_default label">
+          <div id="u84_div" class=""></div>
+          <div id="u84_text" class="text ">
+            <p><span>序号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u85" class="ax_default label">
+          <div id="u85_div" class=""></div>
+          <div id="u85_text" class="text ">
+            <p><span>角色名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u86" class="ax_default label">
+          <div id="u86_div" class=""></div>
+          <div id="u86_text" class="text ">
+            <p><span>角色描述</span></p>
+          </div>
+        </div>
+
+        <!-- 自定义角色中继器 (中继器) -->
+        <div id="u87" class="ax_default" data-label="自定义角色中继器">
+          <script id="u87_script" type="axure-repeater-template" data-label="自定义角色中继器">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u88" class="ax_default u88" data-left="0" data-top="0" data-width="1250" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u89" class="ax_default box_1 u89">
+                <div id="u89_div" class="u89_div"></div>
+              </div>
+
+              <!-- 序号 (矩形) -->
+              <div id="u90" class="ax_default label u90" data-label="序号">
+                <div id="u90_div" class="u90_div"></div>
+                <div id="u90_text" class="text u90_text">
+                  <p><span>序号</span></p>
+                </div>
+              </div>
+
+              <!-- 角色名称 (矩形) -->
+              <div id="u91" class="ax_default label u91" data-label="角色名称">
+                <div id="u91_div" class="u91_div"></div>
+                <div id="u91_text" class="text u91_text">
+                  <p><span>角色名称</span></p>
+                </div>
+              </div>
+
+              <!-- 角色描述 (矩形) -->
+              <div id="u92" class="ax_default label u92" data-label="角色描述">
+                <div id="u92_div" class="u92_div"></div>
+                <div id="u92_text" class="text u92_text">
+                  <p><span>角色描述</span></p>
+                </div>
+              </div>
+
+              <!-- 状态 (矩形) -->
+              <div id="u93" class="ax_default label u93" data-label="状态">
+                <div id="u93_div" class="u93_div"></div>
+                <div id="u93_text" class="text u93_text">
+                  <p><span>状态</span></p>
+                </div>
+              </div>
+
+              <!-- 修改日期 (矩形) -->
+              <div id="u94" class="ax_default label u94" data-label="修改日期">
+                <div id="u94_div" class="u94_div"></div>
+                <div id="u94_text" class="text u94_text">
+                  <p><span>修改日期</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u95" class="ax_default box_1 u95">
+              <div id="u95_div" class="u95_div"></div>
+              <div id="u95_text" class="text u95_text">
+                <p><span>查看用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u96" class="ax_default box_1 u96">
+              <div id="u96_div" class="u96_div"></div>
+              <div id="u96_text" class="text u96_text">
+                <p><span>查看权限</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u97" class="ax_default box_1 u97">
+              <div id="u97_div" class="u97_div"></div>
+              <div id="u97_text" class="text u97_text">
+                <p><span>添加用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u98" class="ax_default box_1 u98">
+              <div id="u98_div" class="u98_div"></div>
+              <div id="u98_text" class="text u98_text">
+                <p><span>编辑</span></p>
+              </div>
+            </div>
+          </script>
+          <div id="u87-1" class="preeval" style="width: 1250px; height: 47px;">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u88-1" class="ax_default u88" style="visibility: inherit" data-left="0" data-top="0" data-width="1250" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u89-1" class="ax_default box_1 u89" style="width: 1250px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u89-1_div" class="u89_div" style="width: 1250px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- 序号 (矩形) -->
+              <div id="u90-1" class="ax_default label u90" data-label="序号" style="width: 9px; height: 16px; left: 30px; top: 16px;visibility: inherit">
+                <div id="u90-1_div" class="u90_div" style="width: 9px; height: 16px;visibility: inherit"></div>
+                <div id="u90-1_text" class="text u90_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>1</span></p>
+                </div>
+              </div>
+
+              <!-- 角色名称 (矩形) -->
+              <div id="u91-1" class="ax_default label u91" data-label="角色名称" style="width: 57px; height: 16px; left: 90px; top: 16px;visibility: inherit">
+                <div id="u91-1_div" class="u91_div" style="width: 57px; height: 16px;visibility: inherit"></div>
+                <div id="u91-1_text" class="text u91_text" style="position: absolute;left: 0px;top: 0px;width: 57px;visibility: inherit">
+                  <p><span>人力资源</span></p>
+                </div>
+              </div>
+
+              <!-- 角色描述 (矩形) -->
+              <div id="u92-1" class="ax_default label u92" data-label="角色描述" style="width: 85px; height: 16px; left: 273px; top: 16px;visibility: inherit">
+                <div id="u92-1_div" class="u92_div" style="width: 85px; height: 16px;visibility: inherit"></div>
+                <div id="u92-1_text" class="text u92_text" style="position: absolute;left: 0px;top: 0px;width: 85px;visibility: inherit">
+                  <p><span>人力相关工作</span></p>
+                </div>
+              </div>
+
+              <!-- 状态 (矩形) -->
+              <div id="u93-1" class="ax_default label u93" data-label="状态" style="width: 29px; height: 16px; left: 457px; top: 16px;visibility: inherit">
+                <div id="u93-1_div" class="u93_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u93-1_text" class="text u93_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>开启</span></p>
+                </div>
+              </div>
+
+              <!-- 修改日期 (矩形) -->
+              <div id="u94-1" class="ax_default label u94" data-label="修改日期" style="width: 59px; height: 16px; left: 583px; top: 16px;visibility: inherit">
+                <div id="u94-1_div" class="u94_div" style="width: 59px; height: 16px;visibility: inherit"></div>
+                <div id="u94-1_text" class="text u94_text" style="position: absolute;left: 0px;top: 0px;width: 59px;visibility: inherit">
+                  <p><span>2019-6-1</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u95-1" class="ax_default box_1 u95" style="width: 80px; height: 32px; left: 946px; top: 8px;visibility: inherit">
+              <div id="u95-1_div" class="u95_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u95-1_text" class="text u95_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u96-1" class="ax_default box_1 u96" style="width: 80px; height: 32px; left: 856px; top: 8px;visibility: inherit">
+              <div id="u96-1_div" class="u96_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u96-1_text" class="text u96_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看权限</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u97-1" class="ax_default box_1 u97" style="width: 80px; height: 32px; left: 1036px; top: 8px;visibility: inherit">
+              <div id="u97-1_div" class="u97_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u97-1_text" class="text u97_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>添加用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u98-1" class="ax_default box_1 u98" style="width: 80px; height: 32px; left: 766px; top: 8px;visibility: inherit">
+              <div id="u98-1_div" class="u98_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u98-1_text" class="text u98_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>编辑</span></p>
+              </div>
+            </div>
+          </div>
+          <div id="u87-2" class="preeval" style="width: 1250px; height: 47px;">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u88-2" class="ax_default u88" style="visibility: inherit" data-left="0" data-top="0" data-width="1250" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u89-2" class="ax_default box_1 u89" style="width: 1250px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u89-2_div" class="u89_div" style="width: 1250px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- 序号 (矩形) -->
+              <div id="u90-2" class="ax_default label u90" data-label="序号" style="width: 9px; height: 16px; left: 30px; top: 16px;visibility: inherit">
+                <div id="u90-2_div" class="u90_div" style="width: 9px; height: 16px;visibility: inherit"></div>
+                <div id="u90-2_text" class="text u90_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>2</span></p>
+                </div>
+              </div>
+
+              <!-- 角色名称 (矩形) -->
+              <div id="u91-2" class="ax_default label u91" data-label="角色名称" style="width: 29px; height: 16px; left: 90px; top: 16px;visibility: inherit">
+                <div id="u91-2_div" class="u91_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u91-2_text" class="text u91_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>设计</span></p>
+                </div>
+              </div>
+
+              <!-- 角色描述 (矩形) -->
+              <div id="u92-2" class="ax_default label u92" data-label="角色描述" style="width: 55px; height: 16px; left: 273px; top: 16px;visibility: inherit">
+                <div id="u92-2_div" class="u92_div" style="width: 55px; height: 16px;visibility: inherit"></div>
+                <div id="u92-2_text" class="text u92_text" style="position: absolute;left: 0px;top: 0px;width: 55px;visibility: inherit">
+                  <p><span>UI图设计</span></p>
+                </div>
+              </div>
+
+              <!-- 状态 (矩形) -->
+              <div id="u93-2" class="ax_default label u93" data-label="状态" style="width: 29px; height: 16px; left: 457px; top: 16px;visibility: inherit">
+                <div id="u93-2_div" class="u93_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u93-2_text" class="text u93_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>开启</span></p>
+                </div>
+              </div>
+
+              <!-- 修改日期 (矩形) -->
+              <div id="u94-2" class="ax_default label u94" data-label="修改日期" style="width: 59px; height: 16px; left: 583px; top: 16px;visibility: inherit">
+                <div id="u94-2_div" class="u94_div" style="width: 59px; height: 16px;visibility: inherit"></div>
+                <div id="u94-2_text" class="text u94_text" style="position: absolute;left: 0px;top: 0px;width: 59px;visibility: inherit">
+                  <p><span>2019-6-1</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u95-2" class="ax_default box_1 u95" style="width: 80px; height: 32px; left: 946px; top: 8px;visibility: inherit">
+              <div id="u95-2_div" class="u95_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u95-2_text" class="text u95_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u96-2" class="ax_default box_1 u96" style="width: 80px; height: 32px; left: 856px; top: 8px;visibility: inherit">
+              <div id="u96-2_div" class="u96_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u96-2_text" class="text u96_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看权限</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u97-2" class="ax_default box_1 u97" style="width: 80px; height: 32px; left: 1036px; top: 8px;visibility: inherit">
+              <div id="u97-2_div" class="u97_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u97-2_text" class="text u97_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>添加用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u98-2" class="ax_default box_1 u98" style="width: 80px; height: 32px; left: 766px; top: 8px;visibility: inherit">
+              <div id="u98-2_div" class="u98_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u98-2_text" class="text u98_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>编辑</span></p>
+              </div>
+            </div>
+          </div>
+          <div id="u87-3" class="preeval" style="width: 1250px; height: 47px;">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u88-3" class="ax_default u88" style="visibility: inherit" data-left="0" data-top="0" data-width="1250" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u89-3" class="ax_default box_1 u89" style="width: 1250px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u89-3_div" class="u89_div" style="width: 1250px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- 序号 (矩形) -->
+              <div id="u90-3" class="ax_default label u90" data-label="序号" style="width: 9px; height: 16px; left: 30px; top: 16px;visibility: inherit">
+                <div id="u90-3_div" class="u90_div" style="width: 9px; height: 16px;visibility: inherit"></div>
+                <div id="u90-3_text" class="text u90_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>3</span></p>
+                </div>
+              </div>
+
+              <!-- 角色名称 (矩形) -->
+              <div id="u91-3" class="ax_default label u91" data-label="角色名称" style="width: 29px; height: 16px; left: 90px; top: 16px;visibility: inherit">
+                <div id="u91-3_div" class="u91_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u91-3_text" class="text u91_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>产品</span></p>
+                </div>
+              </div>
+
+              <!-- 角色描述 (矩形) -->
+              <div id="u92-3" class="ax_default label u92" data-label="角色描述" style="width: 57px; height: 16px; left: 273px; top: 16px;visibility: inherit">
+                <div id="u92-3_div" class="u92_div" style="width: 57px; height: 16px;visibility: inherit"></div>
+                <div id="u92-3_text" class="text u92_text" style="position: absolute;left: 0px;top: 0px;width: 57px;visibility: inherit">
+                  <p><span>需求定义</span></p>
+                </div>
+              </div>
+
+              <!-- 状态 (矩形) -->
+              <div id="u93-3" class="ax_default label u93" data-label="状态" style="width: 29px; height: 16px; left: 457px; top: 16px;visibility: inherit">
+                <div id="u93-3_div" class="u93_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u93-3_text" class="text u93_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>开启</span></p>
+                </div>
+              </div>
+
+              <!-- 修改日期 (矩形) -->
+              <div id="u94-3" class="ax_default label u94" data-label="修改日期" style="width: 59px; height: 16px; left: 583px; top: 16px;visibility: inherit">
+                <div id="u94-3_div" class="u94_div" style="width: 59px; height: 16px;visibility: inherit"></div>
+                <div id="u94-3_text" class="text u94_text" style="position: absolute;left: 0px;top: 0px;width: 59px;visibility: inherit">
+                  <p><span>2019-6-1</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u95-3" class="ax_default box_1 u95" style="width: 80px; height: 32px; left: 946px; top: 8px;visibility: inherit">
+              <div id="u95-3_div" class="u95_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u95-3_text" class="text u95_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u96-3" class="ax_default box_1 u96" style="width: 80px; height: 32px; left: 856px; top: 8px;visibility: inherit">
+              <div id="u96-3_div" class="u96_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u96-3_text" class="text u96_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看权限</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u97-3" class="ax_default box_1 u97" style="width: 80px; height: 32px; left: 1036px; top: 8px;visibility: inherit">
+              <div id="u97-3_div" class="u97_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u97-3_text" class="text u97_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>添加用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u98-3" class="ax_default box_1 u98" style="width: 80px; height: 32px; left: 766px; top: 8px;visibility: inherit">
+              <div id="u98-3_div" class="u98_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u98-3_text" class="text u98_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>编辑</span></p>
+              </div>
+            </div>
+          </div>
+          <div id="u87-4" class="preeval" style="width: 1250px; height: 47px;">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u88-4" class="ax_default u88" style="visibility: inherit" data-left="0" data-top="0" data-width="1250" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u89-4" class="ax_default box_1 u89" style="width: 1250px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u89-4_div" class="u89_div" style="width: 1250px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- 序号 (矩形) -->
+              <div id="u90-4" class="ax_default label u90" data-label="序号" style="width: 9px; height: 16px; left: 30px; top: 16px;visibility: inherit">
+                <div id="u90-4_div" class="u90_div" style="width: 9px; height: 16px;visibility: inherit"></div>
+                <div id="u90-4_text" class="text u90_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>4</span></p>
+                </div>
+              </div>
+
+              <!-- 角色名称 (矩形) -->
+              <div id="u91-4" class="ax_default label u91" data-label="角色名称" style="width: 29px; height: 16px; left: 90px; top: 16px;visibility: inherit">
+                <div id="u91-4_div" class="u91_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u91-4_text" class="text u91_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>开发</span></p>
+                </div>
+              </div>
+
+              <!-- 角色描述 (矩形) -->
+              <div id="u92-4" class="ax_default label u92" data-label="角色描述" style="width: 57px; height: 16px; left: 273px; top: 16px;visibility: inherit">
+                <div id="u92-4_div" class="u92_div" style="width: 57px; height: 16px;visibility: inherit"></div>
+                <div id="u92-4_text" class="text u92_text" style="position: absolute;left: 0px;top: 0px;width: 57px;visibility: inherit">
+                  <p><span>功能实现</span></p>
+                </div>
+              </div>
+
+              <!-- 状态 (矩形) -->
+              <div id="u93-4" class="ax_default label u93" data-label="状态" style="width: 29px; height: 16px; left: 457px; top: 16px;visibility: inherit">
+                <div id="u93-4_div" class="u93_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u93-4_text" class="text u93_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>开启</span></p>
+                </div>
+              </div>
+
+              <!-- 修改日期 (矩形) -->
+              <div id="u94-4" class="ax_default label u94" data-label="修改日期" style="width: 59px; height: 16px; left: 583px; top: 16px;visibility: inherit">
+                <div id="u94-4_div" class="u94_div" style="width: 59px; height: 16px;visibility: inherit"></div>
+                <div id="u94-4_text" class="text u94_text" style="position: absolute;left: 0px;top: 0px;width: 59px;visibility: inherit">
+                  <p><span>2019-6-1</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u95-4" class="ax_default box_1 u95" style="width: 80px; height: 32px; left: 946px; top: 8px;visibility: inherit">
+              <div id="u95-4_div" class="u95_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u95-4_text" class="text u95_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u96-4" class="ax_default box_1 u96" style="width: 80px; height: 32px; left: 856px; top: 8px;visibility: inherit">
+              <div id="u96-4_div" class="u96_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u96-4_text" class="text u96_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>查看权限</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u97-4" class="ax_default box_1 u97" style="width: 80px; height: 32px; left: 1036px; top: 8px;visibility: inherit">
+              <div id="u97-4_div" class="u97_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u97-4_text" class="text u97_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>添加用户</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u98-4" class="ax_default box_1 u98" style="width: 80px; height: 32px; left: 766px; top: 8px;visibility: inherit">
+              <div id="u98-4_div" class="u98_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+              <div id="u98-4_text" class="text u98_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                <p><span>编辑</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u99" class="ax_default label">
+          <div id="u99_div" class=""></div>
+          <div id="u99_text" class="text ">
+            <p><span>操作</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u100" class="ax_default label">
+          <div id="u100_div" class=""></div>
+          <div id="u100_text" class="text ">
+            <p><span>状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u101" class="ax_default label">
+          <div id="u101_div" class=""></div>
+          <div id="u101_text" class="text ">
+            <p><span>修改日期</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增角色按钮 (矩形) -->
+      <div id="u102" class="ax_default box_1" data-label="新增角色按钮">
+        <div id="u102_div" class=""></div>
+        <div id="u102_text" class="text ">
+          <p><span>新增角色</span></p>
+        </div>
+      </div>
+
+      <!-- 查看权限1 (组 合) -->
+      <div id="u103" class="ax_default ax_default_hidden" data-label="查看权限1" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u104" class="ax_default box_2">
+          <div id="u104_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u105" class="ax_default label">
+          <div id="u105_div" class=""></div>
+          <div id="u105_text" class="text ">
+            <p><span>权限查看</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u106" class="ax_default image">
+          <img id="u106_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u107" class="ax_default label">
+          <div id="u107_div" class=""></div>
+          <div id="u107_text" class="text ">
+            <p><span>功能权限</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u108" class="ax_default box_1">
+          <div id="u108_div" class=""></div>
+          <div id="u108_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u109" class="ax_default box_1">
+          <div id="u109_div" class=""></div>
+          <div id="u109_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u110" class="ax_default line">
+          <img id="u110_img" class="img " src="images/权限管理——角色管理/u110.png"/>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u111" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (形状) -->
+          <div id="u112" class="ax_default _形状">
+            <img id="u112_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u113" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u114" class="ax_default label selected">
+            <div id="u114_div" class="selected"></div>
+            <div id="u114_text" class="text ">
+              <p><span>工作台</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u115" class="ax_default ellipse selected">
+            <div id="u115_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u116" class="ax_default _形状 selected">
+            <img id="u116_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u117" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u118" class="ax_default label selected">
+            <div id="u118_div" class="selected"></div>
+            <div id="u118_text" class="text ">
+              <p><span>请假</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u119" class="ax_default ellipse selected">
+            <div id="u119_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u120" class="ax_default _形状 selected">
+            <img id="u120_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u121" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u122" class="ax_default label selected">
+            <div id="u122_div" class="selected"></div>
+            <div id="u122_text" class="text ">
+              <p><span>周报</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u123" class="ax_default ellipse selected">
+            <div id="u123_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u124" class="ax_default _形状 selected">
+            <img id="u124_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u125" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u126" class="ax_default label selected">
+            <div id="u126_div" class="selected"></div>
+            <div id="u126_text" class="text ">
+              <p><span>招聘</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u127" class="ax_default ellipse selected">
+            <div id="u127_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u128" class="ax_default _形状 selected">
+            <img id="u128_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u129" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u130" class="ax_default label selected">
+            <div id="u130_div" class="selected"></div>
+            <div id="u130_text" class="text ">
+              <p><span>待办工作</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u131" class="ax_default ellipse selected">
+            <div id="u131_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u132" class="ax_default _形状 selected">
+            <img id="u132_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u133" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (形状) -->
+          <div id="u134" class="ax_default _形状">
+            <img id="u134_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u135" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u136" class="ax_default label selected">
+            <div id="u136_div" class="selected"></div>
+            <div id="u136_text" class="text ">
+              <p><span>角色管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u137" class="ax_default ellipse selected">
+            <div id="u137_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u138" class="ax_default _形状 selected">
+            <img id="u138_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u139" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u140" class="ax_default label selected">
+            <div id="u140_div" class="selected"></div>
+            <div id="u140_text" class="text ">
+              <p><span>权限设置</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u141" class="ax_default ellipse selected">
+            <div id="u141_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u142" class="ax_default _形状 selected">
+            <img id="u142_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u143" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u144" class="ax_default label selected">
+            <div id="u144_div" class="selected"></div>
+            <div id="u144_text" class="text ">
+              <p><span>赋权管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u145" class="ax_default ellipse selected">
+            <div id="u145_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u146" class="ax_default _形状 selected">
+            <img id="u146_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u147" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u148" class="ax_default label selected">
+            <div id="u148_div" class="selected"></div>
+            <div id="u148_text" class="text ">
+              <p><span>权限管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u149" class="ax_default ellipse selected">
+            <div id="u149_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u150" class="ax_default _形状 selected">
+            <img id="u150_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u151" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u152" class="ax_default label selected">
+            <div id="u152_div" class="selected"></div>
+            <div id="u152_text" class="text ">
+              <p><span>部门管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u153" class="ax_default ellipse selected">
+            <div id="u153_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u154" class="ax_default _形状 selected">
+            <img id="u154_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u155" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u156" class="ax_default label selected">
+            <div id="u156_div" class="selected"></div>
+            <div id="u156_text" class="text ">
+              <p><span>员工管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u157" class="ax_default ellipse selected">
+            <div id="u157_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u158" class="ax_default _形状 selected">
+            <img id="u158_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u159" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u160" class="ax_default label selected">
+            <div id="u160_div" class="selected"></div>
+            <div id="u160_text" class="text ">
+              <p><span>组织管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u161" class="ax_default ellipse selected">
+            <div id="u161_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u162" class="ax_default _形状 selected">
+            <img id="u162_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u163" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (形状) -->
+          <div id="u164" class="ax_default _形状">
+            <img id="u164_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u165" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (形状) -->
+          <div id="u166" class="ax_default _形状">
+            <img id="u166_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u167" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u168" class="ax_default label selected">
+            <div id="u168_div" class="selected"></div>
+            <div id="u168_text" class="text ">
+              <p><span>设置</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u169" class="ax_default ellipse selected">
+            <div id="u169_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u170" class="ax_default _形状 selected">
+            <img id="u170_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u171" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u172" class="ax_default label selected">
+            <div id="u172_div" class="selected"></div>
+            <div id="u172_text" class="text ">
+              <p><span>企业设置</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u173" class="ax_default ellipse selected">
+            <div id="u173_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u174" class="ax_default _形状 selected">
+            <img id="u174_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u175" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u176" class="ax_default label selected">
+            <div id="u176_div" class="selected"></div>
+            <div id="u176_text" class="text ">
+              <p><span>审批设置</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u177" class="ax_default ellipse selected">
+            <div id="u177_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u178" class="ax_default _形状 selected">
+            <img id="u178_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u179" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u180" class="ax_default label selected">
+            <div id="u180_div" class="selected"></div>
+            <div id="u180_text" class="text ">
+              <p><span>更换主管理员</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u181" class="ax_default ellipse selected">
+            <div id="u181_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u182" class="ax_default _形状 selected">
+            <img id="u182_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u183" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u184" class="ax_default label selected">
+            <div id="u184_div" class="selected"></div>
+            <div id="u184_text" class="text ">
+              <p><span>设置子管理员</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u185" class="ax_default ellipse selected">
+            <div id="u185_div" class="selected"></div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u186" class="ax_default _形状 selected">
+            <img id="u186_img" class="img " src="images/权限管理——角色管理/u116_selected.png"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- 查看用户2 (组 合) -->
+      <div id="u187" class="ax_default ax_default_hidden" data-label="查看用户2" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- 查看用户2 (矩形) -->
+        <div id="u188" class="ax_default box_2" data-label="查看用户2">
+          <div id="u188_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u189" class="ax_default label">
+          <div id="u189_div" class=""></div>
+          <div id="u189_text" class="text ">
+            <p><span>用户查看</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u190" class="ax_default image">
+          <img id="u190_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u191" class="ax_default box_1">
+          <div id="u191_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u192" class="ax_default label">
+          <div id="u192_div" class=""></div>
+          <div id="u192_text" class="text ">
+            <p><span>序号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u193" class="ax_default label">
+          <div id="u193_div" class=""></div>
+          <div id="u193_text" class="text ">
+            <p><span>姓名</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u194" class="ax_default label">
+          <div id="u194_div" class=""></div>
+          <div id="u194_text" class="text ">
+            <p><span>所属部门</span></p>
+          </div>
+        </div>
+
+        <!-- 查看用户2 (中继器) -->
+        <div id="u195" class="ax_default" data-label="查看用户2">
+          <script id="u195_script" type="axure-repeater-template" data-label="查看用户2">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u196" class="ax_default u196" data-label="查看用户2" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u197" class="ax_default box_1 u197">
+                <div id="u197_div" class="u197_div"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u198" class="ax_default label u198" data-label="Number">
+                <div id="u198_div" class="u198_div"></div>
+                <div id="u198_text" class="text u198_text">
+                  <p><span>序号</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u199" class="ax_default label u199" data-label="Name">
+                <div id="u199_div" class="u199_div"></div>
+                <div id="u199_text" class="text u199_text">
+                  <p><span>姓名</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u200" class="ax_default label u200" data-label="dept">
+                <div id="u200_div" class="u200_div"></div>
+                <div id="u200_text" class="text u200_text">
+                  <p><span>部门</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u201" class="ax_default label u201" data-label="phone">
+                <div id="u201_div" class="u201_div"></div>
+                <div id="u201_text" class="text u201_text">
+                  <p><span>手机</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u202" class="ax_default label u202" data-label="op">
+                <div id="u202_div" class="u202_div"></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u203" class="ax_default box_1 u203">
+                <div id="u203_div" class="u203_div"></div>
+                <div id="u203_text" class="text u203_text">
+                  <p><span>删除</span></p>
+                </div>
+              </div>
+            </div>
+          </script>
+          <div id="u195-1" class="preeval" style="width: 748px; height: 47px;">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u196-1" class="ax_default u196" data-label="查看用户2" style="visibility: inherit" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u197-1" class="ax_default box_1 u197" style="width: 748px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u197-1_div" class="u197_div" style="width: 748px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u198-1" class="ax_default label u198" data-label="Number" style="width: 9px; height: 17px; left: 17px; top: 16px;visibility: inherit">
+                <div id="u198-1_div" class="u198_div" style="width: 9px; height: 17px;visibility: inherit"></div>
+                <div id="u198-1_text" class="text u198_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>1</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u199-1" class="ax_default label u199" data-label="Name" style="width: 43px; height: 16px; left: 113px; top: 16px;visibility: inherit">
+                <div id="u199-1_div" class="u199_div" style="width: 43px; height: 16px;visibility: inherit"></div>
+                <div id="u199-1_text" class="text u199_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>王小虎</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u200-1" class="ax_default label u200" data-label="dept" style="width: 43px; height: 17px; left: 264px; top: 16px;visibility: inherit">
+                <div id="u200-1_div" class="u200_div" style="width: 43px; height: 17px;visibility: inherit"></div>
+                <div id="u200-1_text" class="text u200_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>技术部</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u201-1" class="ax_default label u201" data-label="phone" style="width: 89px; height: 17px; left: 396px; top: 16px;visibility: inherit">
+                <div id="u201-1_div" class="u201_div" style="width: 89px; height: 17px;visibility: inherit"></div>
+                <div id="u201-1_text" class="text u201_text" style="position: absolute;left: 0px;top: 0px;width: 89px;visibility: inherit">
+                  <p><span>12345678901</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u202-1" class="ax_default label u202" data-label="op" style="width: 29px; height: 16px; left: 637px; top: 16px;visibility: inherit">
+                <div id="u202-1_div" class="u202_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u203-1" class="ax_default box_1 u203" style="width: 80px; height: 32px; left: 565px; top: 4px;visibility: inherit">
+                <div id="u203-1_div" class="u203_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+                <div id="u203-1_text" class="text u203_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                  <p><span>删除</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="u195-2" class="preeval" style="width: 748px; height: 47px;">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u196-2" class="ax_default u196" data-label="查看用户2" style="visibility: inherit" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u197-2" class="ax_default box_1 u197" style="width: 748px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u197-2_div" class="u197_div" style="width: 748px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u198-2" class="ax_default label u198" data-label="Number" style="width: 9px; height: 17px; left: 17px; top: 16px;visibility: inherit">
+                <div id="u198-2_div" class="u198_div" style="width: 9px; height: 17px;visibility: inherit"></div>
+                <div id="u198-2_text" class="text u198_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>2</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u199-2" class="ax_default label u199" data-label="Name" style="width: 43px; height: 16px; left: 113px; top: 16px;visibility: inherit">
+                <div id="u199-2_div" class="u199_div" style="width: 43px; height: 16px;visibility: inherit"></div>
+                <div id="u199-2_text" class="text u199_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>王小龙</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u200-2" class="ax_default label u200" data-label="dept" style="width: 43px; height: 17px; left: 264px; top: 16px;visibility: inherit">
+                <div id="u200-2_div" class="u200_div" style="width: 43px; height: 17px;visibility: inherit"></div>
+                <div id="u200-2_text" class="text u200_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>财务部</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u201-2" class="ax_default label u201" data-label="phone" style="width: 89px; height: 17px; left: 396px; top: 16px;visibility: inherit">
+                <div id="u201-2_div" class="u201_div" style="width: 89px; height: 17px;visibility: inherit"></div>
+                <div id="u201-2_text" class="text u201_text" style="position: absolute;left: 0px;top: 0px;width: 89px;visibility: inherit">
+                  <p><span>12345678902</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u202-2" class="ax_default label u202" data-label="op" style="width: 29px; height: 16px; left: 637px; top: 16px;visibility: inherit">
+                <div id="u202-2_div" class="u202_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u203-2" class="ax_default box_1 u203" style="width: 80px; height: 32px; left: 565px; top: 4px;visibility: inherit">
+                <div id="u203-2_div" class="u203_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+                <div id="u203-2_text" class="text u203_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                  <p><span>删除</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="u195-3" class="preeval" style="width: 748px; height: 47px;">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u196-3" class="ax_default u196" data-label="查看用户2" style="visibility: inherit" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u197-3" class="ax_default box_1 u197" style="width: 748px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u197-3_div" class="u197_div" style="width: 748px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u198-3" class="ax_default label u198" data-label="Number" style="width: 9px; height: 17px; left: 17px; top: 16px;visibility: inherit">
+                <div id="u198-3_div" class="u198_div" style="width: 9px; height: 17px;visibility: inherit"></div>
+                <div id="u198-3_text" class="text u198_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>3</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u199-3" class="ax_default label u199" data-label="Name" style="width: 29px; height: 16px; left: 113px; top: 16px;visibility: inherit">
+                <div id="u199-3_div" class="u199_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u199-3_text" class="text u199_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>王一</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u200-3" class="ax_default label u200" data-label="dept" style="width: 43px; height: 17px; left: 264px; top: 16px;visibility: inherit">
+                <div id="u200-3_div" class="u200_div" style="width: 43px; height: 17px;visibility: inherit"></div>
+                <div id="u200-3_text" class="text u200_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>设计部</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u201-3" class="ax_default label u201" data-label="phone" style="width: 89px; height: 17px; left: 396px; top: 16px;visibility: inherit">
+                <div id="u201-3_div" class="u201_div" style="width: 89px; height: 17px;visibility: inherit"></div>
+                <div id="u201-3_text" class="text u201_text" style="position: absolute;left: 0px;top: 0px;width: 89px;visibility: inherit">
+                  <p><span>12345678903</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u202-3" class="ax_default label u202" data-label="op" style="width: 29px; height: 16px; left: 637px; top: 16px;visibility: inherit">
+                <div id="u202-3_div" class="u202_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u203-3" class="ax_default box_1 u203" style="width: 80px; height: 32px; left: 565px; top: 4px;visibility: inherit">
+                <div id="u203-3_div" class="u203_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+                <div id="u203-3_text" class="text u203_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                  <p><span>删除</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="u195-4" class="preeval" style="width: 748px; height: 47px;">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u196-4" class="ax_default u196" data-label="查看用户2" style="visibility: inherit" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u197-4" class="ax_default box_1 u197" style="width: 748px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u197-4_div" class="u197_div" style="width: 748px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u198-4" class="ax_default label u198" data-label="Number" style="width: 9px; height: 17px; left: 17px; top: 16px;visibility: inherit">
+                <div id="u198-4_div" class="u198_div" style="width: 9px; height: 17px;visibility: inherit"></div>
+                <div id="u198-4_text" class="text u198_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>4</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u199-4" class="ax_default label u199" data-label="Name" style="width: 29px; height: 16px; left: 113px; top: 16px;visibility: inherit">
+                <div id="u199-4_div" class="u199_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+                <div id="u199-4_text" class="text u199_text" style="position: absolute;left: 0px;top: 0px;width: 29px;visibility: inherit">
+                  <p><span>王二</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u200-4" class="ax_default label u200" data-label="dept" style="width: 43px; height: 17px; left: 264px; top: 16px;visibility: inherit">
+                <div id="u200-4_div" class="u200_div" style="width: 43px; height: 17px;visibility: inherit"></div>
+                <div id="u200-4_text" class="text u200_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>人力部</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u201-4" class="ax_default label u201" data-label="phone" style="width: 89px; height: 17px; left: 396px; top: 16px;visibility: inherit">
+                <div id="u201-4_div" class="u201_div" style="width: 89px; height: 17px;visibility: inherit"></div>
+                <div id="u201-4_text" class="text u201_text" style="position: absolute;left: 0px;top: 0px;width: 89px;visibility: inherit">
+                  <p><span>12345678904</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u202-4" class="ax_default label u202" data-label="op" style="width: 29px; height: 16px; left: 637px; top: 16px;visibility: inherit">
+                <div id="u202-4_div" class="u202_div" style="width: 29px; height: 16px;visibility: inherit"></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u203-4" class="ax_default box_1 u203" style="width: 80px; height: 32px; left: 565px; top: 4px;visibility: inherit">
+                <div id="u203-4_div" class="u203_div" style="width: 80px; height: 32px;visibility: inherit"></div>
+                <div id="u203-4_text" class="text u203_text" style="position: absolute;left: 2px;top: 8px;width: 76px;visibility: inherit">
+                  <p><span>删除</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u204" class="ax_default line">
+          <img id="u204_img" class="img " src="images/权限管理——角色管理/u110.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u205" class="ax_default label">
+          <div id="u205_div" class=""></div>
+          <div id="u205_text" class="text ">
+            <p><span>手机号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u206" class="ax_default label">
+          <div id="u206_div" class=""></div>
+          <div id="u206_text" class="text ">
+            <p><span>操作</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 删除确认 (组 合) -->
+      <div id="u207" class="ax_default ax_default_hidden" data-label="删除确认" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u208" class="ax_default box_2">
+          <div id="u208_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u209" class="ax_default label">
+          <div id="u209_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u210" class="ax_default label">
+          <div id="u210_div" class=""></div>
+          <div id="u210_text" class="text ">
+            <p><span>提示</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u211" class="ax_default box_1">
+          <div id="u211_div" class=""></div>
+          <div id="u211_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u212" class="ax_default box_1">
+          <div id="u212_div" class=""></div>
+          <div id="u212_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u213" class="ax_default image">
+          <img id="u213_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u214" class="ax_default icon">
+          <img id="u214_img" class="img " src="images/权限管理——角色管理/u214.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u215" class="ax_default label">
+          <div id="u215_div" class=""></div>
+          <div id="u215_text" class="text ">
+            <p><span>确认删除此条数据吗？</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增角色 (组 合) -->
+      <div id="u216" class="ax_default ax_default_hidden" data-label="新增角色" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u217" class="ax_default box_2">
+          <div id="u217_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u218" class="ax_default label">
+          <div id="u218_div" class=""></div>
+          <div id="u218_text" class="text ">
+            <p><span>角色新增</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u219" class="ax_default image">
+          <img id="u219_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u220" class="ax_default label">
+          <div id="u220_div" class=""></div>
+          <div id="u220_text" class="text ">
+            <p><span style="color:#FF0000;">*</span><span style="color:#606266;">&nbsp; 角色名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u221" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u222" class="ax_default box_1">
+            <div id="u222_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (文本框) -->
+          <div id="u223" class="ax_default text_field">
+            <input id="u223_input" type="text" value=""/>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u224" class="ax_default label">
+          <div id="u224_div" class=""></div>
+          <div id="u224_text" class="text ">
+            <p><span>角色描述</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u225" class="ax_default box_1">
+          <div id="u225_div" class=""></div>
+          <div id="u225_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u226" class="ax_default box_1">
+          <div id="u226_div" class=""></div>
+          <div id="u226_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u227" class="ax_default line">
+          <img id="u227_img" class="img " src="images/权限管理——角色管理/u110.png"/>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u228" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u229" class="ax_default box_1">
+            <div id="u229_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (多行文本框) -->
+          <div id="u230" class="ax_default text_area">
+            <textarea id="u230_input"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 编辑角色 (组 合) -->
+      <div id="u231" class="ax_default ax_default_hidden" data-label="编辑角色" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u232" class="ax_default box_2">
+          <div id="u232_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u233" class="ax_default label">
+          <div id="u233_div" class=""></div>
+          <div id="u233_text" class="text ">
+            <p><span>角色编辑</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u234" class="ax_default image">
+          <img id="u234_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u235" class="ax_default label">
+          <div id="u235_div" class=""></div>
+          <div id="u235_text" class="text ">
+            <p><span style="color:#FF0000;">*</span><span style="color:#606266;">&nbsp; 角色名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u236" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u237" class="ax_default box_1">
+            <div id="u237_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (文本框) -->
+          <div id="u238" class="ax_default text_field">
+            <input id="u238_input" type="text" value="设计"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u239" class="ax_default label">
+          <div id="u239_div" class=""></div>
+          <div id="u239_text" class="text ">
+            <p><span>角色描述</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u240" class="ax_default box_1">
+          <div id="u240_div" class=""></div>
+          <div id="u240_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u241" class="ax_default box_1">
+          <div id="u241_div" class=""></div>
+          <div id="u241_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u242" class="ax_default line">
+          <img id="u242_img" class="img " src="images/权限管理——角色管理/u110.png"/>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u243" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u244" class="ax_default box_1">
+            <div id="u244_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (多行文本框) -->
+          <div id="u245" class="ax_default text_area">
+            <textarea id="u245_input">UI图设计</textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 查看用户1 (组 合) -->
+      <div id="u246" class="ax_default ax_default_hidden" data-label="查看用户1" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- 查看用户2 (矩形) -->
+        <div id="u247" class="ax_default box_2" data-label="查看用户2">
+          <div id="u247_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u248" class="ax_default label">
+          <div id="u248_div" class=""></div>
+          <div id="u248_text" class="text ">
+            <p><span>用户查看</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u249" class="ax_default image">
+          <img id="u249_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u250" class="ax_default box_1">
+          <div id="u250_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u251" class="ax_default label">
+          <div id="u251_div" class=""></div>
+          <div id="u251_text" class="text ">
+            <p><span>序号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u252" class="ax_default label">
+          <div id="u252_div" class=""></div>
+          <div id="u252_text" class="text ">
+            <p><span>姓名</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u253" class="ax_default label">
+          <div id="u253_div" class=""></div>
+          <div id="u253_text" class="text ">
+            <p><span>所属部门</span></p>
+          </div>
+        </div>
+
+        <!-- 查看用户1 (中继器) -->
+        <div id="u254" class="ax_default" data-label="查看用户1">
+          <script id="u254_script" type="axure-repeater-template" data-label="查看用户1">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u255" class="ax_default u255" data-label="查看用户2" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u256" class="ax_default box_1 u256">
+                <div id="u256_div" class="u256_div"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u257" class="ax_default label u257" data-label="Number">
+                <div id="u257_div" class="u257_div"></div>
+                <div id="u257_text" class="text u257_text">
+                  <p><span>序号</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u258" class="ax_default label u258" data-label="Name">
+                <div id="u258_div" class="u258_div"></div>
+                <div id="u258_text" class="text u258_text">
+                  <p><span>姓名</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u259" class="ax_default label u259" data-label="dept">
+                <div id="u259_div" class="u259_div"></div>
+                <div id="u259_text" class="text u259_text">
+                  <p><span>部门</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u260" class="ax_default label u260" data-label="phone">
+                <div id="u260_div" class="u260_div"></div>
+                <div id="u260_text" class="text u260_text">
+                  <p><span>手机</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u261" class="ax_default label u261" data-label="op">
+                <div id="u261_div" class="u261_div"></div>
+              </div>
+            </div>
+          </script>
+          <div id="u254-1" class="preeval" style="width: 748px; height: 47px;">
+
+            <!-- 查看用户2 (组 合) -->
+            <div id="u255-1" class="ax_default u255" data-label="查看用户2" style="visibility: inherit" data-left="0" data-top="0" data-width="748" data-height="47">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u256-1" class="ax_default box_1 u256" style="width: 748px; height: 47px; left: 0px; top: 0px;visibility: inherit">
+                <div id="u256-1_div" class="u256_div" style="width: 748px; height: 47px;visibility: inherit"></div>
+              </div>
+
+              <!-- Number (矩形) -->
+              <div id="u257-1" class="ax_default label u257" data-label="Number" style="width: 9px; height: 17px; left: 17px; top: 16px;visibility: inherit">
+                <div id="u257-1_div" class="u257_div" style="width: 9px; height: 17px;visibility: inherit"></div>
+                <div id="u257-1_text" class="text u257_text" style="position: absolute;left: 0px;top: 0px;width: 9px;visibility: inherit">
+                  <p><span>1</span></p>
+                </div>
+              </div>
+
+              <!-- Name (矩形) -->
+              <div id="u258-1" class="ax_default label u258" data-label="Name" style="width: 43px; height: 16px; left: 113px; top: 16px;visibility: inherit">
+                <div id="u258-1_div" class="u258_div" style="width: 43px; height: 16px;visibility: inherit"></div>
+                <div id="u258-1_text" class="text u258_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>王二虎</span></p>
+                </div>
+              </div>
+
+              <!-- dept (矩形) -->
+              <div id="u259-1" class="ax_default label u259" data-label="dept" style="width: 43px; height: 17px; left: 264px; top: 16px;visibility: inherit">
+                <div id="u259-1_div" class="u259_div" style="width: 43px; height: 17px;visibility: inherit"></div>
+                <div id="u259-1_text" class="text u259_text" style="position: absolute;left: 0px;top: 0px;width: 43px;visibility: inherit">
+                  <p><span>技术部</span></p>
+                </div>
+              </div>
+
+              <!-- phone (矩形) -->
+              <div id="u260-1" class="ax_default label u260" data-label="phone" style="width: 89px; height: 17px; left: 396px; top: 16px;visibility: inherit">
+                <div id="u260-1_div" class="u260_div" style="width: 89px; height: 17px;visibility: inherit"></div>
+                <div id="u260-1_text" class="text u260_text" style="position: absolute;left: 0px;top: 0px;width: 89px;visibility: inherit">
+                  <p><span>12345678901</span></p>
+                </div>
+              </div>
+
+              <!-- op (矩形) -->
+              <div id="u261-1" class="ax_default label u261" data-label="op" style="width: 155px; height: 17px; left: 555px; top: 16px;visibility: inherit">
+                <div id="u261-1_div" class="u261_div" style="width: 155px; height: 17px;visibility: inherit"></div>
+                <div id="u261-1_text" class="text u261_text" style="position: absolute;left: 0px;top: 0px;width: 155px;visibility: inherit">
+                  <p><span>可到设置中更换主管理员</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u262" class="ax_default line">
+          <img id="u262_img" class="img " src="images/权限管理——角色管理/u110.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u263" class="ax_default label">
+          <div id="u263_div" class=""></div>
+          <div id="u263_text" class="text ">
+            <p><span>手机号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u264" class="ax_default label">
+          <div id="u264_div" class=""></div>
+          <div id="u264_text" class="text ">
+            <p><span>操作</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 查看权限2 (组 合) -->
+      <div id="u265" class="ax_default ax_default_hidden" data-label="查看权限2" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u266" class="ax_default box_2">
+          <div id="u266_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u267" class="ax_default label">
+          <div id="u267_div" class=""></div>
+          <div id="u267_text" class="text ">
+            <p><span>权限查看</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u268" class="ax_default image">
+          <img id="u268_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u269" class="ax_default label">
+          <div id="u269_div" class=""></div>
+          <div id="u269_text" class="text ">
+            <p><span>功能权限</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u270" class="ax_default box_1">
+          <div id="u270_div" class=""></div>
+          <div id="u270_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u271" class="ax_default box_1">
+          <div id="u271_div" class=""></div>
+          <div id="u271_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u272" class="ax_default line">
+          <img id="u272_img" class="img " src="images/权限管理——角色管理/u110.png"/>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u273" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (组 合) -->
+          <div id="u274" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (形状) -->
+            <div id="u275" class="ax_default _形状">
+              <img id="u275_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u276" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u277" class="ax_default label">
+                <div id="u277_div" class=""></div>
+                <div id="u277_text" class="text ">
+                  <p><span>工作台</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u278" class="ax_default ellipse">
+                <div id="u278_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u279" class="ax_default _形状">
+                <img id="u279_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u280" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u281" class="ax_default label">
+              <div id="u281_div" class=""></div>
+              <div id="u281_text" class="text ">
+                <p><span>请假</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u282" class="ax_default ellipse">
+              <div id="u282_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u283" class="ax_default _形状">
+              <img id="u283_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u284" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u285" class="ax_default label">
+              <div id="u285_div" class=""></div>
+              <div id="u285_text" class="text ">
+                <p><span>周报</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u286" class="ax_default ellipse">
+              <div id="u286_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u287" class="ax_default _形状">
+              <img id="u287_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u288" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u289" class="ax_default label">
+              <div id="u289_div" class=""></div>
+              <div id="u289_text" class="text ">
+                <p><span>招聘</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u290" class="ax_default ellipse">
+              <div id="u290_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u291" class="ax_default _形状">
+              <img id="u291_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u292" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u293" class="ax_default label">
+              <div id="u293_div" class=""></div>
+              <div id="u293_text" class="text ">
+                <p><span>待办工作</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u294" class="ax_default ellipse">
+              <div id="u294_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u295" class="ax_default _形状">
+              <img id="u295_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u296" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (形状) -->
+            <div id="u297" class="ax_default _形状">
+              <img id="u297_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u298" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u299" class="ax_default label">
+                <div id="u299_div" class=""></div>
+                <div id="u299_text" class="text ">
+                  <p><span>权限管理</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u300" class="ax_default ellipse">
+                <div id="u300_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u301" class="ax_default _形状">
+                <img id="u301_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u302" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u303" class="ax_default label">
+              <div id="u303_div" class=""></div>
+              <div id="u303_text" class="text ">
+                <p><span>角色管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u304" class="ax_default ellipse">
+              <div id="u304_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u305" class="ax_default _形状">
+              <img id="u305_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u306" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u307" class="ax_default label">
+              <div id="u307_div" class=""></div>
+              <div id="u307_text" class="text ">
+                <p><span>权限设置</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u308" class="ax_default ellipse">
+              <div id="u308_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u309" class="ax_default _形状">
+              <img id="u309_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u310" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u311" class="ax_default label">
+              <div id="u311_div" class=""></div>
+              <div id="u311_text" class="text ">
+                <p><span>赋权管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u312" class="ax_default ellipse">
+              <div id="u312_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u313" class="ax_default _形状">
+              <img id="u313_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u314" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u315" class="ax_default label">
+              <div id="u315_div" class=""></div>
+              <div id="u315_text" class="text ">
+                <p><span>待办工作</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u316" class="ax_default ellipse">
+              <div id="u316_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u317" class="ax_default _形状">
+              <img id="u317_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u318" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u319" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+              <!-- Unnamed (形状) -->
+              <div id="u320" class="ax_default _形状">
+                <img id="u320_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u321" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u322" class="ax_default label">
+                  <div id="u322_div" class=""></div>
+                  <div id="u322_text" class="text ">
+                    <p><span>组织管理</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u323" class="ax_default ellipse">
+                  <div id="u323_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (形状) -->
+                <div id="u324" class="ax_default _形状">
+                  <img id="u324_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u325" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u326" class="ax_default label">
+                <div id="u326_div" class=""></div>
+                <div id="u326_text" class="text ">
+                  <p><span>组织架构</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u327" class="ax_default ellipse">
+                <div id="u327_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u328" class="ax_default _形状">
+                <img id="u328_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u329" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u330" class="ax_default label">
+                <div id="u330_div" class=""></div>
+                <div id="u330_text" class="text ">
+                  <p><span>员工管理</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u331" class="ax_default ellipse">
+                <div id="u331_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u332" class="ax_default _形状">
+                <img id="u332_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u333" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (形状) -->
+            <div id="u334" class="ax_default _形状">
+              <img id="u334_img" class="img " src="images/权限管理——角色管理/u112.png"/>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u335" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u336" class="ax_default label">
+                <div id="u336_div" class=""></div>
+                <div id="u336_text" class="text ">
+                  <p><span>设置</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u337" class="ax_default ellipse">
+                <div id="u337_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u338" class="ax_default _形状">
+                <img id="u338_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u339" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u340" class="ax_default label">
+              <div id="u340_div" class=""></div>
+              <div id="u340_text" class="text ">
+                <p><span>企业设置</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u341" class="ax_default ellipse">
+              <div id="u341_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u342" class="ax_default _形状">
+              <img id="u342_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u343" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u344" class="ax_default label">
+              <div id="u344_div" class=""></div>
+              <div id="u344_text" class="text ">
+                <p><span>审批设置</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u345" class="ax_default ellipse">
+              <div id="u345_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u346" class="ax_default _形状">
+              <img id="u346_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u347" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u348" class="ax_default label">
+              <div id="u348_div" class=""></div>
+              <div id="u348_text" class="text ">
+                <p><span>更换主管理员</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u349" class="ax_default ellipse">
+              <div id="u349_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u350" class="ax_default _形状">
+              <img id="u350_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u351" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u352" class="ax_default label">
+              <div id="u352_div" class=""></div>
+              <div id="u352_text" class="text ">
+                <p><span>设置子管理员</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u353" class="ax_default ellipse">
+              <div id="u353_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u354" class="ax_default _形状">
+              <img id="u354_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分页 (组 合) -->
+      <div id="u355" class="ax_default" data-label="分页" data-left="615" data-top="802" data-width="675" data-height="35">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u356" class="ax_default shape disabled">
+          <div id="u356_div" class="disabled"></div>
+          <div id="u356_text" class="text ">
+            <p><span>&lt;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u357" class="ax_default shape selected">
+          <div id="u357_div" class="selected"></div>
+          <div id="u357_text" class="text ">
+            <p><span>1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u358" class="ax_default shape">
+          <div id="u358_div" class=""></div>
+          <div id="u358_text" class="text ">
+            <p><span>&gt;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u359" class="ax_default shape">
+          <div id="u359_div" class=""></div>
+          <div id="u359_text" class="text ">
+            <p><span>2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u360" class="ax_default shape">
+          <div id="u360_div" class=""></div>
+          <div id="u360_text" class="text ">
+            <p><span>3</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u361" class="ax_default shape">
+          <div id="u361_div" class=""></div>
+          <div id="u361_text" class="text ">
+            <p><span>4</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u362" class="ax_default shape">
+          <div id="u362_div" class=""></div>
+          <div id="u362_text" class="text ">
+            <p><span>5</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u363" class="ax_default paragraph">
+          <div id="u363_div" class=""></div>
+          <div id="u363_text" class="text ">
+            <p><span>共 200 条</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u364" class="ax_default paragraph">
+          <div id="u364_div" class=""></div>
+          <div id="u364_text" class="text ">
+            <p><span>跳至</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u365" class="ax_default" data-left="1215" data-top="809" data-width="55" data-height="25">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u366" class="ax_default box_1">
+            <img id="u366_img" class="img " src="images/权限管理——角色管理/u366.png"/>
+          </div>
+
+          <!-- Unnamed (文本框) -->
+          <div id="u367" class="ax_default text_field">
+            <input id="u367_input" type="text" value="5"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u368" class="ax_default paragraph">
+          <div id="u368_div" class=""></div>
+          <div id="u368_text" class="text ">
+            <p><span>页</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (组 合) -->
+        <div id="u369" class="ax_default" data-left="698" data-top="807" data-width="102" data-height="25">
+
+          <!-- Page (矩形) -->
+          <div id="u370" class="ax_default shape" data-label="Page">
+            <div id="u370_div" class=""></div>
+            <div id="u370_text" class="text ">
+              <p><span>20条/页</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u371" class="ax_default _形状">
+            <img id="u371_img" class="img " src="images/权限管理——角色管理/u371.png"/>
+          </div>
+        </div>
+
+        <!-- Actions (组 合) -->
+        <div id="u372" class="ax_default ax_default_hidden" data-label="Actions" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u373" class="ax_default shape">
+            <div id="u373_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u374" class="ax_default shape">
+            <img id="u374_img" class="img " src="images/权限管理——角色管理/u374.png"/>
+            <div id="u374_text" class="text ">
+              <p><span>50条/页</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u375" class="ax_default shape">
+            <img id="u375_img" class="img " src="images/权限管理——角色管理/u374.png"/>
+            <div id="u375_text" class="text ">
+              <p><span>20条/页</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u376" class="ax_default shape">
+            <img id="u376_img" class="img " src="images/权限管理——角色管理/u376.png"/>
+            <div id="u376_text" class="text ">
+              <p><span>100条/页</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u377" class="ax_default shape">
+          <div id="u377_div" class=""></div>
+          <div id="u377_text" class="text ">
+            <p><span>...</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u378" class="ax_default shape">
+          <div id="u378_div" class=""></div>
+          <div id="u378_text" class="text ">
+            <p><span>10</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u379" class="ax_default" data-left="40" data-top="175" data-width="1250" data-height="47">
+
+        <!-- Unnamed (组 合) -->
+        <div id="u380" class="ax_default" data-left="40" data-top="175" data-width="1250" data-height="47">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u381" class="ax_default box_1">
+            <div id="u381_div" class=""></div>
+          </div>
+
+          <!-- 序号 (矩形) -->
+          <div id="u382" class="ax_default label" data-label="序号">
+            <div id="u382_div" class=""></div>
+            <div id="u382_text" class="text ">
+              <p><span>2</span></p>
+            </div>
+          </div>
+
+          <!-- 角色名称 (矩形) -->
+          <div id="u383" class="ax_default label" data-label="角色名称">
+            <div id="u383_div" class=""></div>
+            <div id="u383_text" class="text ">
+              <p><span>子管理员</span></p>
+            </div>
+          </div>
+
+          <!-- 角色描述 (矩形) -->
+          <div id="u384" class="ax_default label" data-label="角色描述">
+            <div id="u384_div" class=""></div>
+            <div id="u384_text" class="text ">
+              <p><span>该角色为默认角色，不可修改和删除，拥有后台管理全部权限</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u385" class="ax_default box_1">
+          <div id="u385_div" class=""></div>
+          <div id="u385_text" class="text ">
+            <p><span>查看用户</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u386" class="ax_default box_1">
+          <div id="u386_div" class=""></div>
+          <div id="u386_text" class="text ">
+            <p><span>查看权限</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u387" class="ax_default box_1">
+          <div id="u387_div" class=""></div>
+          <div id="u387_text" class="text ">
+            <p><span>添加用户</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u388" class="ax_default" data-left="40" data-top="222" data-width="1250" data-height="47">
+
+        <!-- Unnamed (组 合) -->
+        <div id="u389" class="ax_default" data-left="40" data-top="222" data-width="1250" data-height="47">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u390" class="ax_default box_1">
+            <div id="u390_div" class=""></div>
+          </div>
+
+          <!-- 序号 (矩形) -->
+          <div id="u391" class="ax_default label" data-label="序号">
+            <div id="u391_div" class=""></div>
+            <div id="u391_text" class="text ">
+              <p><span>3</span></p>
+            </div>
+          </div>
+
+          <!-- 角色名称 (矩形) -->
+          <div id="u392" class="ax_default label" data-label="角色名称">
+            <div id="u392_div" class=""></div>
+            <div id="u392_text" class="text ">
+              <p><span>部门主管</span></p>
+            </div>
+          </div>
+
+          <!-- 角色描述 (矩形) -->
+          <div id="u393" class="ax_default label" data-label="角色描述">
+            <div id="u393_div" class=""></div>
+            <div id="u393_text" class="text ">
+              <p><span>该角色为默认角色，不可修改和删除，拥有后台管理全部权限</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u394" class="ax_default box_1">
+          <div id="u394_div" class=""></div>
+          <div id="u394_text" class="text ">
+            <p><span>查看用户</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u395" class="ax_default box_1">
+          <div id="u395_div" class=""></div>
+          <div id="u395_text" class="text ">
+            <p><span>查看权限</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u396" class="ax_default box_1">
+          <div id="u396_div" class=""></div>
+          <div id="u396_text" class="text ">
+            <p><span>添加用户</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u397" class="ax_default" data-left="1050" data-top="382" data-width="240" data-height="38">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u398" class="ax_default box_1">
+          <div id="u398_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (文本框) -->
+        <div id="u399" class="ax_default text_field">
+          <input id="u399_input" type="text" value=""/>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u400" class="ax_default _形状">
+          <img id="u400_img" class="img " src="images/权限管理——角色管理/u400.png"/>
+        </div>
+      </div>
+
+      <!-- 部门主管提示 (组 合) -->
+      <div id="u401" class="ax_default ax_default_hidden" data-label="部门主管提示" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u402" class="ax_default box_1">
+          <div id="u402_div" class=""></div>
+          <div id="u402_text" class="text ">
+            <p><span>可以到【组织架构】中为部门设置主管</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (三角形) -->
+        <div id="u403" class="ax_default box_2">
+          <img id="u403_img" class="img " src="images/权限管理——角色管理/u403.png"/>
+        </div>
+      </div>
+
+      <!-- 子管理员提示 (组 合) -->
+      <div id="u404" class="ax_default ax_default_hidden" data-label="子管理员提示" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- 子管理员提示 (矩形) -->
+        <div id="u405" class="ax_default box_1" data-label="子管理员提示">
+          <div id="u405_div" class=""></div>
+          <div id="u405_text" class="text ">
+            <p><span>只有主管理员可以添加子管理员</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (三角形) -->
+        <div id="u406" class="ax_default box_2">
+          <img id="u406_img" class="img " src="images/权限管理——角色管理/u403.png"/>
+        </div>
+      </div>
+
+      <!-- 添加用户 (动态面板) -->
+      <div id="u407" class="ax_default ax_default_hidden" data-label="添加用户" style="display:none; visibility: hidden">
+        <div id="u407_state0" class="panel_state" data-label="State1" style="">
+          <div id="u407_state0_content" class="panel_state_content">
+
+            <!-- 消息提示 (组 合) -->
+            <div id="u408" class="ax_default" data-label="消息提示" data-left="0" data-top="0" data-width="815" data-height="657">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u409" class="ax_default box_2">
+                <div id="u409_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u410" class="ax_default label">
+                <div id="u410_div" class=""></div>
+                <div id="u410_text" class="text ">
+                  <p><span>添加用户</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u411" class="ax_default image">
+                <img id="u411_img" class="img " src="images/权限管理——角色管理/u106.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u412" class="ax_default box_1">
+                <div id="u412_div" class=""></div>
+                <div id="u412_text" class="text ">
+                  <p><span>确定</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u413" class="ax_default box_1">
+                <div id="u413_div" class=""></div>
+                <div id="u413_text" class="text ">
+                  <p><span>取消</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (水平线) -->
+              <div id="u414" class="ax_default line">
+                <img id="u414_img" class="img " src="images/权限管理——角色管理/u414.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u415" class="ax_default box_2">
+                <div id="u415_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u416" class="ax_default box_2">
+                <div id="u416_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u417" class="ax_default" data-left="68" data-top="121" data-width="240" data-height="38">
+
+                <!-- 框 (矩形) -->
+                <div id="u418" class="ax_default box_1" data-label="框">
+                  <img id="u418_img" class="img " src="images/权限管理——角色管理/框_u418.png"/>
+                </div>
+
+                <!-- 指示器 (图片) -->
+                <div id="u419" class="ax_default image" data-label="指示器">
+                  <img id="u419_img" class="img " src="images/权限管理——角色管理/指示器_u419.png"/>
+                </div>
+
+                <!-- 选中选项 (矩形) -->
+                <div id="u420" class="ax_default label" data-label="选中选项">
+                  <div id="u420_div" class=""></div>
+                  <div id="u420_text" class="text ">
+                    <p><span>请选择</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 选择项 (动态面板) -->
+              <div id="u421" class="ax_default ax_default_hidden" data-label="选择项" style="display:none; visibility: hidden">
+                <div id="u421_state0" class="panel_state" data-label="State1" style="">
+                  <div id="u421_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (组 合) -->
+                    <div id="u422" class="ax_default" selectiongroup="省" data-left="0" data-top="0" data-width="100" data-height="30">
+
+                      <!-- 选项一 (矩形) -->
+                      <div id="u423" class="ax_default box_2" data-label="选项一">
+                        <div id="u423_div" class=""></div>
+                        <div id="u423_text" class="text ">
+                          <p><span>&nbsp;&nbsp;&nbsp; LIMAI</span></p>
+                        </div>
+                      </div>
+
+                      <!-- 指示器一 (图片) -->
+                      <div id="u424" class="ax_default image" data-label="指示器一">
+                        <img id="u424_img" class="img " src="images/权限管理——角色管理/指示器一_u424.png"/>
+                      </div>
+                    </div>
+
+                    <!-- 二级 (动态面板) -->
+                    <div id="u425" class="ax_default ax_default_hidden" data-label="二级" style="display:none; visibility: hidden">
+                      <div id="u425_state0" class="panel_state" data-label="State1" style="">
+                        <div id="u425_state0_content" class="panel_state_content">
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u426" class="ax_default" selectiongroup="北京组合" data-left="0" data-top="0" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u427" class="ax_default box_2" data-label="选项一">
+                              <div id="u427_div" class=""></div>
+                              <div id="u427_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 项目部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u428" class="ax_default" selectiongroup="北京组合" data-left="0" data-top="35" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u429" class="ax_default box_2" data-label="选项一">
+                              <div id="u429_div" class=""></div>
+                              <div id="u429_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 人事部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u430" class="ax_default" selectiongroup="北京组合" data-left="0" data-top="68" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u431" class="ax_default box_2" data-label="选项一">
+                              <div id="u431_div" class=""></div>
+                              <div id="u431_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 财务部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 指示器一 (图片) -->
+                          <div id="u432" class="ax_default image" data-label="指示器一">
+                            <img id="u432_img" class="img " src="images/权限管理——角色管理/指示器一_u424.png"/>
+                          </div>
+
+                          <!-- 指示器一 (图片) -->
+                          <div id="u433" class="ax_default image" data-label="指示器一">
+                            <img id="u433_img" class="img " src="images/权限管理——角色管理/指示器一_u424.png"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="u425_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+                        <div id="u425_state1_content" class="panel_state_content">
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u434" class="ax_default" selectiongroup="市组合" data-left="0" data-top="0" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u435" class="ax_default box_2" data-label="选项一">
+                              <div id="u435_div" class=""></div>
+                              <div id="u435_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 南京</span></p>
+                              </div>
+                            </div>
+
+                            <!-- 指示器一 (图片) -->
+                            <div id="u436" class="ax_default image" data-label="指示器一">
+                              <img id="u436_img" class="img " src="images/权限管理——角色管理/指示器一_u424.png"/>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u437" class="ax_default" selectiongroup="市组合" data-left="0" data-top="31" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u438" class="ax_default box_2" data-label="选项一">
+                              <div id="u438_div" class=""></div>
+                              <div id="u438_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 苏州</span></p>
+                              </div>
+                            </div>
+
+                            <!-- 指示器一 (图片) -->
+                            <div id="u439" class="ax_default image" data-label="指示器一">
+                              <img id="u439_img" class="img " src="images/权限管理——角色管理/指示器一_u424.png"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 三级 (动态面板) -->
+                    <div id="u440" class="ax_default ax_default_hidden" data-label="三级" style="display:none; visibility: hidden">
+                      <div id="u440_state0" class="panel_state" data-label="State1" style="">
+                        <div id="u440_state0_content" class="panel_state_content">
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u441" class="ax_default" data-left="0" data-top="0" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u442" class="ax_default box_2" data-label="选项一">
+                              <div id="u442_div" class=""></div>
+                              <div id="u442_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 项目一部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u443" class="ax_default" data-left="0" data-top="30" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u444" class="ax_default box_2" data-label="选项一">
+                              <div id="u444_div" class=""></div>
+                              <div id="u444_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 项目二部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u445" class="ax_default" data-left="0" data-top="60" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u446" class="ax_default box_2" data-label="选项一">
+                              <div id="u446_div" class=""></div>
+                              <div id="u446_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 项目三部</span></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="u440_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+                        <div id="u440_state1_content" class="panel_state_content">
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u447" class="ax_default" selectiongroup="苏州组合" data-left="0" data-top="0" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u448" class="ax_default box_2" data-label="选项一">
+                              <div id="u448_div" class=""></div>
+                              <div id="u448_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 人事一部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u449" class="ax_default" selectiongroup="苏州组合" data-left="0" data-top="31" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u450" class="ax_default box_2" data-label="选项一">
+                              <div id="u450_div" class=""></div>
+                              <div id="u450_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 人事二部</span></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组 合) -->
+                          <div id="u451" class="ax_default" selectiongroup="苏州组合" data-left="0" data-top="61" data-width="100" data-height="30">
+
+                            <!-- 选项一 (矩形) -->
+                            <div id="u452" class="ax_default box_2" data-label="选项一">
+                              <div id="u452_div" class=""></div>
+                              <div id="u452_text" class="text ">
+                                <p><span>&nbsp;&nbsp;&nbsp; 人事三部</span></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u453" class="ax_default" data-left="68" data-top="143" data-width="441" data-height="94">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u454" class="ax_default label">
+                  <div id="u454_div" class=""></div>
+                  <div id="u454_text" class="text ">
+                    <p><span>张三</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u455" class="ax_default ellipse">
+                  <div id="u455_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (形状) -->
+                <div id="u456" class="ax_default _形状">
+                  <img id="u456_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u457" class="ax_default label">
+                  <div id="u457_div" class=""></div>
+                  <div id="u457_text" class="text ">
+                    <p><span style="font-family:'Arial Normal', 'Arial';">哈哈&nbsp; </span><span style="font-family:'Comic Sans MS Normal', 'Comic Sans MS';">x</span><span style="font-family:'Arial Normal', 'Arial';"> </span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u458" class="ax_default" data-left="68" data-top="247" data-width="48" data-height="18">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u459" class="ax_default label">
+                  <div id="u459_div" class=""></div>
+                  <div id="u459_text" class="text ">
+                    <p><span>李四</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u460" class="ax_default ellipse">
+                  <div id="u460_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (形状) -->
+                <div id="u461" class="ax_default _形状">
+                  <img id="u461_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u462" class="ax_default" data-left="68" data-top="275" data-width="48" data-height="18">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u463" class="ax_default label">
+                  <div id="u463_div" class=""></div>
+                  <div id="u463_text" class="text ">
+                    <p><span>王五</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u464" class="ax_default ellipse">
+                  <div id="u464_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (形状) -->
+                <div id="u465" class="ax_default _形状">
+                  <img id="u465_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u466" class="ax_default" data-left="68" data-top="303" data-width="48" data-height="18">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u467" class="ax_default label">
+                  <div id="u467_div" class=""></div>
+                  <div id="u467_text" class="text ">
+                    <p><span>赵六</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u468" class="ax_default ellipse">
+                  <div id="u468_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (形状) -->
+                <div id="u469" class="ax_default _形状">
+                  <img id="u469_img" class="img " src="images/权限管理——角色管理/u116.png"/>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u470" class="ax_default label">
+                <div id="u470_div" class=""></div>
+                <div id="u470_text" class="text ">
+                  <p><span>选择：</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u471" class="ax_default label">
+                <div id="u471_div" class=""></div>
+                <div id="u471_text" class="text ">
+                  <p><span>已选：</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u472" class="ax_default box_1">
+              <div id="u472_div" class=""></div>
+              <div id="u472_text" class="text ">
+                <p><span>点击打开嵌套表单的Dialog </span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

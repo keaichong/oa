@@ -42,50 +42,23 @@ export default {
           hasChildren: false
         },
         {
-          title: "平台管理",
-          path: "/platform-management",
+          title: "权限管理",
+          path: "/permission-management",
           hasChildren: true,
           children: [
             {
-              title: "权限管理",
-              path: "/platform-management/rights-management",
+              title: "角色管理",
+              path: "/permission-management/role-management",
               hasChildren: false
             },
             {
-              title: "菜单管理",
-              path: "/platform-management/menu-management",
+              title: "权限设置",
+              path: "/permission-management/permission-setting",
               hasChildren: false
             },
             {
-              title: "用户管理",
-              path: "/platform-management/user-management",
-              hasChildren: false
-            },
-            {
-              title: "管理员管理",
-              path: "/platform-management/admin-management",
-              hasChildren: false
-            }
-          ]
-        },
-        {
-          title: "企业管理",
-          path: "/enterprise-management",
-          hasChildren: true,
-          children: [
-            {
-              title: "企业列表",
-              path: "/enterprise-management/enterprise-list",
-              hasChildren: false
-            },
-            {
-              title: "企业权限",
-              path: "/enterprise-management/enterprise-permission",
-              hasChildren: false
-            },
-            {
-              title: "企业菜单",
-              path: "/enterprise-management/enterprise-menu",
+              title: "赋权管理",
+              path: "/permission-management/empowerment-management",
               hasChildren: false
             }
           ]

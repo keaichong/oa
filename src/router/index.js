@@ -59,60 +59,28 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/platform-management',
+    path: '/permission-management',
     component: Layout,
-    redirect: '/platform-management/rights-management',
-    meta: { title: '平台管理' },
+    redirect: '/permission-management/role-management',
+    meta: { title: '权限管理' },
     children: [
       {
-        path: 'rights-management',
-        name: 'rights-management',
-        component: () => import('@/views/permission-management/index'),
-        meta: { title: '权限管理' }
+        path: 'role-management',
+        name: 'role-management',
+        component: () => import('@/views/permission-management/role-management'),
+        meta: { title: '角色管理' }
       },
       {
-        path: 'menu-management',
-        name: 'menu-management',
-        component: () => import('@/views/menu-management/index'),
-        meta: { title: '菜单管理' }
+        path: 'permission-setting',
+        name: 'permission-setting',
+        component: () => import('@/views/permission-management/permission-setting'),
+        meta: { title: '权限设置' }
       },
       {
-        path: 'user-management',
-        name: 'user-management',
-        component: () => import('@/views/user-management/index'),
-        meta: { title: '用户管理' }
-      },
-      {
-        path: 'admin-management',
-        name: 'admin-management',
-        component: () => import('@/views/admin-management/index'),
-        meta: { title: '管理员管理' }
-      }
-    ]
-  },
-  {
-    path: '/enterprise-management',
-    component: Layout,
-    redirect: '/enterprise-management/enterprise-list',
-    meta: { title: '企业管理' },
-    children: [
-      {
-        path: 'enterprise-list',
-        name: 'enterprise-list',
-        component: () => import('@/views/enterprise-list/index'),
-        meta: { title: '企业列表' }
-      },
-      {
-        path: 'enterprise-permission',
-        name: 'enterprise-permission',
-        component: () => import('@/views/permission-management/index'),
-        meta: { title: '企业权限' }
-      },
-      {
-        path: 'enterprise-menu',
-        name: 'enterprise-menu',
-        component: () => import('@/views/menu-management/index'),
-        meta: { title: '企业菜单' }
+        path: 'empowerment-management',
+        name: 'empowerment-management',
+        component: () => import('@/views/permission-management/empowerment-management'),
+        meta: { title: '赋权管理' }
       }
     ]
   },
@@ -135,8 +103,7 @@ export const constantRoutes = [
         meta: { title: '人员管理' }
       },
     ]
-  }
-  ,
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
