@@ -2,7 +2,7 @@
   <div class="register">
     <div class="bgImage">背景图</div>
     <div class="container">
-      <h2>一分钟注册藜麦</h2>
+      <h2>一分钟注册**</h2>
       <div class="firstStep" v-if="showfirstStep">
         <el-tabs v-model="registerType">
           <el-tab-pane label="企业注册" name="businessRegistered"></el-tab-pane>
@@ -54,7 +54,7 @@
         </div>
         <div class="personal" v-if="registerByPersonal">
           <div class="personalRegistered" v-if="personalRegistered">
-            <h4>你已注册过藜麦</h4>
+            <h4>你已注册过**</h4>
             <el-button type="primary" class="registerBtn">立即登录</el-button>
           </div>
           <div class="busUnregistered" v-if="personalUnregistered">
