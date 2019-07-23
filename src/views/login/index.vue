@@ -98,7 +98,7 @@ export default {
      * @description 新用户注册处理事件
      */
     handleRegister() {
-
+      this.$router.push('/register');
     },
     /**
      * @description 忘记密码处理事件
@@ -161,7 +161,6 @@ export default {
           // }).catch(() => {
           //   this.loading = false
           // })
-         
         } else {
           console.log('error submit!!')
           return false
