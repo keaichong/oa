@@ -1,0 +1,73 @@
+.container {
+  margin: 30px 10px 0 20px;
+  height: calc(100vh - 80px);
+  .el-input {
+    width: 200px;
+  }
+  // tab标签页标题
+  .el-tabs__item{
+    font-size: 16px;
+  }
+  .el-table {
+    font-size: 13px;
+    div.cell {
+      text-align: center;
+    }
+  }
+  // 表单样式公用样式
+  .el-form-item__label{
+    text-align: right;
+    font-weight: normal;
+  }
+  // 分页组件统一设置样式
+  .pagination {
+    float: right;
+    margin: 10px 0px;
+    .el-input {
+      width: 50px;
+    }
+  }
+  // dialog组件公共样式
+  .el-divider {
+    margin-top: -15px;
+  }
+  .el-dialog__title {
+    font-size: 16px;
+  }
+  .el-dialog__body {
+    padding: 10px 20px;
+  }
+  .el-dialog__footer{
+    padding: 10px 20px;
+  }
+  // 滚动条公有样式
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius:5px;
+    background-color: rgba(144,147,153,.3)
+  }
+}
+// 表格标题行背景色
+.el-table .has-gutter tr{
+  background: #F2F2F2;
+}
+.el-table th{
+  background: none;
+}
+// 改变表格每一行的高度
+.el-table td{
+  padding: 8px 0;
+}
+// 按钮与输入框样式
+.header {
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  .el-input {
+    width: 200px;
+  }
+}

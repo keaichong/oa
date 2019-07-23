@@ -1,165 +1,154 @@
 <template>
   <div class="container">
-    <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-      <el-tab-pane label="角色管理" name="roleManagement">
-        <!-- 顶部容器 -->
-        <div class="header">
-          <el-button type="primary">新增</el-button>
-          <el-input type="text" prefix-icon="el-icon-search" v-model="role" placeholder="请输入角色名称"></el-input>
-        </div>
-        <!-- 中间部分 -->
-        <div class="middle">
-          <el-table
-            :data="tableData"
-            style="width: 90%">
-            <el-table-column
-              label="序号"
-              width="60">
-              <template slot-scope="scope">
-                <span>{{ scope.row.order }}</span>
+    <!-- 默认角色表格 -->
+    <div class="defaultRoleContainer">
+      <el-tabs v-model="activeDefaultRoleName">
+        <el-tab-pane label="默认角色" name="defaultRole">
+          <el-table 
+            :data='defaultRoleData' 
+            style='width: 100%'>
+            <el-table-column label='序号' type='index' width='80px'>
+            </el-table-column>
+            <el-table-column label='角色名称' prop="name" min-width='6%'>
+            </el-table-column>
+            <el-table-column label='角色描述'  min-width='20%'>
+              <template slot-scope='scope'>
+                <span class='roleDescription' :title='scope.row.description' slot='reference'>{{ scope.row.description }}</span>
               </template>
             </el-table-column>
-            <el-table-column
-              label="角色名称"
-              width="150">
-              <template slot-scope="scope">
+            <el-table-column label='操作' width='500px'>
+              <template slot-scope='scope'>
+                <el-button 
+                  size="small" 
+                  :plain="true" 
+                  type="success"
+                  @click="handleCheckPermission">
+                  查看权限
+                </el-button>
+                <el-button 
+                  size="small" 
+                  :plain="true" 
+                  type="success">
+                  查看用户
+                </el-button>
+                <el-button 
+                  size="small" 
+                  :plain="true" 
+                  type="warning" 
+                  v-if="scope.row.name==='主管理员'">
+                  更换用户
+                </el-button>
+                <el-button 
+                  size="small" 
+                  :plain="true" 
+                  type="primary" 
+                  v-if="scope.row.name!=='主管理员'">
+                  添加用户
+                </el-button>
+              </template>
+            </el-table-column>
+            </el-table>
+        </el-tab-pane>
+      </el-tabs>
+    </div>
+    <!-- 自定义角色表格 -->
+    <div class="customRoleContainer">
+      <el-tabs v-model="activeCustomRoleName">
+        <el-tab-pane label="自定义角色" name="customRole">
+          <div class='header'>
+            <el-button type='primary'>新增角色</el-button>
+            <el-input
+              type='text'
+              prefix-icon="el-icon-search"
+              v-model.trim='inputAddRoleName'
+              placeholder='请输入角色名称'
+              size='small'>
+            </el-input>
+          </div>
+          <el-table 
+            :data='customRoleData.data' 
+            style='width: 100%'
+            :height="customRoleTableHeight">
+            <el-table-column label='序号' type='index' width='80px'>
+            </el-table-column>
+            <el-table-column label='角色名称' min-width='7%'>
+              <template slot-scope='scope'>
                 <span>{{ scope.row.roleName }}</span>
               </template>
             </el-table-column>
-            <el-table-column
-              label="角色描述"
-              width="200">
-              <template slot-scope="scope">
-                <span>{{ scope.row.roleDescription }}</span>
+            <el-table-column label='角色描述' min-width='20%'>
+              <template slot-scope='scope'>
+                <span class='roleDescription' :title='scope.row.description' slot='reference'>{{ scope.row.description }}</span>
               </template>
             </el-table-column>
-            <el-table-column
-              label="角色状态"
-              width="80">
-              <template slot-scope="scope">
-                <span>{{ scope.row.roleStatus }}</span>
-              </template>
-            </el-table-column>
-            <el-table-column
-              label="修改时间"
-              width="150">
-              <template slot-scope="scope">
-                <span>{{ scope.row.modificationTime }}</span>
-              </template>
-            </el-table-column>
-            <el-table-column label="操作">
-              <template slot-scope="scope">
-                <el-button size="small" :plain="true" v-for="(item, index) in scope.row.operation" :type="item | statusFilter" :key="item" @click="handleClick(item, index)">{{ item | buttonName}}</el-button>
-              </template>
-            </el-table-column>
-          </el-table>
-        </div>
-        <el-dialog :title="checkUser.title" :visible.sync="checkUserDialog" width="600px" :close-on-click-modal="false">
-          <el-divider></el-divider>
-          <el-table :data="checkUser.user" style="width: 100%">
-            <el-table-column
-              label="姓名"
-              width="100">
-              <template slot-scope="scope">
-                <span>{{ scope.row.name }}</span>
-              </template>
-            </el-table-column>
-            <el-table-column
-              label="所属部门"
-              width="100">
-              <template slot-scope="scope">
-                <span>{{ scope.row.department }}</span>
-              </template>
-            </el-table-column>
-            <el-table-column
-              label="手机号"
-              width="150">
-              <template slot-scope="scope">
-                <span>{{ scope.row.phoneNum }}</span>
-              </template>
-            </el-table-column>
-            <el-table-column
-              label="操作">
-              <template slot-scope="scope">
-                <el-button size="small" :plain="true" v-for="(item, index) in scope.row.operation" :type="item | statusFilter" :key="item" @click="handleClick(item, index)">{{ item | buttonName}}</el-button>
+            <el-table-column label='状态' min-width='7%'>
+                <template slot-scope='scope'>
+                  <span>{{ scope.row.status === 0 ? '启用' : '停用' }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label='修改日期' min-width='15%'>
+                <template slot-scope='scope'>
+                  <span>{{ scope.row.updateTime }}</span>
+                </template>
+              </el-table-column>
+            <el-table-column label='操作' width='500px'>
+              <template slot-scope='scope'>
+                <el-button
+                  size='small'
+                  :plain='true'
+                  type='warning'>
+                  编辑
+                </el-button>
+                <el-button
+                  size='small'
+                  :plain='true'
+                  type='success'>
+                  查看权限
+                </el-button>
+                <el-button
+                  size='small'
+                  :plain='true'
+                  type='success'>
+                  查看用户
+                </el-button>
+                <el-button
+                  size='small'
+                  :plain='true'
+                  type='primary'>
+                  添加用户
+                </el-button>
               </template>
             </el-table-column>
           </el-table>
-          <el-pagination
-            background
-            layout="prev, pager, next"
-            :page-size="5"
-            :total="checkUser.totalPage"
-            hide-on-single-page>
-          </el-pagination>
-        </el-dialog>
-        <el-dialog title="权限" :visible.sync="checkPermissionDialog"  width="400px" :close-on-click-modal="false">
-          <el-divider></el-divider>
-          <PermissionManager :isEditPermission="isEditPermission"/> 
-        </el-dialog>
-      </el-tab-pane>
-      <el-tab-pane label="权限设置" name="permissionManagement">
-        <el-row>
-          <el-col :span="3">
-            <div class="grid-content bg-purple">
-              <div class="roleTitle">
-                <h4>{{roleSource}}</h4>
-              </div>
-              <div class="roleContent">
-                <ul>
-                  <li>管理员</li>
-                </ul>
-              </div>
-            </div>
-          </el-col>
-          <el-col :span="10">
-            <div class="grid-content bg-purple-light">
-              <div class="roleTitle">
-                <h4>{{roleName}}</h4>
-              </div>
-              <div class="roleContent">
-                <PermissionManager />
-              </div>
-            </div>
-          </el-col>
-        </el-row>
-        <div class="setting">
-          <el-button>取消</el-button>
-          <el-button type="primary">确认</el-button> 
-        </div>
-      </el-tab-pane>
-      <el-tab-pane label="赋权管理" name="empowerManagement">
-        <el-row>
-          <el-col :span="3">
-            <div class="grid-content bg-purple">
-              <div class="roleTitle">
-                <h4>赋权用户</h4>
-              </div>
-              <div class="roleContent">
-                <el-button plain type="primary" size="small">添加用户</el-button>
-              </div>
-            </div>
-          </el-col>
-          <el-col :span="10">
-            <div class="grid-content bg-purple-light">
-              <div class="roleTitle">
-                <h4>分类</h4>
-              </div>
-              <div class="roleContent setPermission">
-                <el-tabs type="border-card" tab-position="left">
-                  <el-tab-pane label="按角色赋权">按角色赋权</el-tab-pane>
-                  <el-tab-pane label="按功能赋权">按功能赋权</el-tab-pane>
-                </el-tabs>
-              </div>
-            </div>
-          </el-col>
-        </el-row>
-        <div class="setting">
-          <el-button>取消</el-button>
-          <el-button type="primary">确认</el-button> 
-        </div>
-      </el-tab-pane>
-    </el-tabs>
+          <div class="pagination">
+            <el-pagination
+              background
+              @current-change="handleCurrentChange"
+              :current-page.sync="customRoleData.currentPage"
+              :page-sizes="[20, 50, 100]"
+              :page-size="customRoleData.pageSize"
+              layout="total, sizes, prev, pager, next, jumper"
+              :total="customRoleData.totalNum"
+              @size-change="handleRoleSizeChange"
+              @prev-click="gotoPrevPage"
+              @next-click="gotoNextPage">
+            </el-pagination>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
+    </div>
+    <!-- 查看权限弹窗 -->
+    <div>
+      <el-dialog
+        title="权限查看"
+        :visible.sync="checkPermissionDialog"
+        width="400px"
+        :close-on-click-modal="false"
+        @closed="checkPermissionDialog=false">
+        <el-divider></el-divider>
+        <PermissionManager/>
+      </el-dialog>
+    </div>
   </div>  
 </template>
 
@@ -167,40 +156,33 @@
   import PermissionManager from '@/components/PermissionManager/index.vue';
   import { deleteData } from '@/utils/delete-data';
   export default {
-    filters: {
-      statusFilter(status) {
-				const statusMap = {
-					'edit': 'primary',
-          'delete': 'danger',
-          'checkPermission': 'primary',
-          'addUser': 'primary',
-          'checkUser': 'primary'
-				}
-				return statusMap[status]
-      },
-      buttonName(item) {
-        const names = {
-          'edit': '编辑',
-          'delete': '删除',
-          'checkPermission': '查看权限',
-          'addUser': '添加用户',
-          'checkUser': '查看用户'
-        }
-        return names[item];
-      }
-    },
     data() {
       return {
-        activeName: 'roleManagement',
-        role: '',
-        tableData: [{
-          order: 1,
-          roleName: '王小虎',
-          roleDescription: '上海市普陀区金沙江路 1518 弄',
-          roleStatus: '开启',
-          modificationTime: '2019-6-14',
-          operation: ['edit', 'delete', 'checkPermission', 'addUser', 'checkUser']
-        }],
+        activeDefaultRoleName: 'defaultRole',
+        defaultRoleData: [
+          {
+            name: '主管理员',
+            description: '该角色为默认角色，不可修改和删除，拥有后台管理全部权限'
+          },
+          {
+            name: '子管理员',
+            description: '该角色为默认角色，不可修改和删除，拥有后台管理全部权限'
+          },
+          {
+            name: '部门主管',
+            description: '该角色为默认角色，不可修改和删除，拥有后台管理全部权限'
+          }
+        ],
+        activeCustomRoleName: 'customRole',
+        customRoleData: {
+          data: [],
+          pageNum: 1,
+          pageSize: 20,
+          currentPage: 1,
+          totalNum: 0
+        },
+        inputAddRoleName: '',
+        customRoleTableHeight: '',
         checkUser: {
           title: '管理员-用户列表',
           user: [
@@ -221,18 +203,13 @@
       };
     },
     watch: {
-      $route: {
-        handler: function(route) {
-          let curRoute = route.name; 
-          if (curRoute === '') {
-            
-          }
-        },
-        immediate: true
-      }
     },
     components: {
       PermissionManager
+    },
+    mounted() {
+      const windowHeight = window.innerHeight;
+      this.customRoleTableHeight = windowHeight - 501.6 + 'px';
     },
     methods: {
       /**
@@ -259,81 +236,42 @@
             });
           });
         }
-      }
+      },
+      /**
+       * @description 默认角色以及自定义角色查看对应的权限
+       */
+      handleCheckPermission() {
+        this.checkPermissionDialog = true;
+      },
+      handleCurrentChange() {},
+      handleRoleSizeChange() {},
+      gotoPrevPage() {},
+      gotoNextPage() {}
     }
   }
 </script>
 
 <style lang="scss">
-  .container{
-    margin: 20px 0 0 20px;
-    .el-input{
-      width: 200px;
-    }
-    .el-table{
-      margin-bottom: 10px;
-    }
-    .el-table div.cell{
-      text-align: center;
-    }
-    .el-table td{
-      padding: 5px 0;
-    }
-    .el-divider{
-      margin: 5px 0;
-    }
-    .el-dialog__body{
-      padding: 4px 10px;
-    }
-    .el-pagination{
-      margin: 10px;
-    }
-  }
-  .header{
-    margin: 20px 20px;
-  }
-  .middle{
-    margin: 20px 20px;
-  }
-  .customClass{
-    width: 320px;
-  }
-  .roleTitle{
-    border: 1px solid #e3e3e3;
-    padding-left: 20px;
-  }
-  .roleContent{
-    height: 450px;
-    border: 1px solid #e3e3e3;
-    .el-button{
-      display: block;
-      margin: 10px auto;
-    }
-    ul{ 
-      list-style: none;
-      padding: 0px;
-      li{
-        padding: 10px 0;
-        text-align: center;
-        font-size: 13px;
-        &:hover{
-          background: #F5F7FA;
-          cursor: pointer;
-        }
+  @import '@/styles/global.scss';
+  .container {
+    .defaultRoleContainer {
+      height: 265px;
+      .el-tabs__header {
+        width: 64px;
       }
     }
-  }
-  .setPermission{
-    .el-tabs{
-      height: 100%;
-      border: none;
-      box-shadow: none;
+    .customRoleContainer {
+      .el-tabs__header {
+        width: 80px;
+      }
     }
-  }
-  .setting{
-    .el-button:nth-child(1){
-      margin-left: 550px;
-      margin-top: 20px;
+    .roleDescription {
+      display: inline-block;
+      max-width: 500px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
     }
   }
 </style>
