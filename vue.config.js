@@ -43,17 +43,16 @@ module.exports = {
     proxy: {
       // change xxx-api/login => mock/login
       // detail: https://cli.vuejs.org/config/#devserver-proxy
-      [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:${port}/mock`,
+      '/api': {
+        target: `http://47.104.106.140:8090`,
         changeOrigin: true,
         // 如果是https接口，需要配置这个参数
         // secure: false
         pathRewrite: {
-          ['^' + process.env.VUE_APP_BASE_API]: ''
+          ['^' + '/api']: ''
         }
       }
-    },
-    after: require('./mock/mock-server.js')
+    }
   },
   // webpack配置（覆盖默认的webpack配置）
   configureWebpack: {
