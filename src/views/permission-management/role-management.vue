@@ -28,7 +28,8 @@
                 <el-button 
                   size="small" 
                   :plain="true" 
-                  type="success">
+                  type="success"
+                  @click="handleCheckUsers">
                   查看用户
                 </el-button>
                 <el-button 
@@ -56,7 +57,7 @@
       <el-tabs v-model="activeCustomRoleName">
         <el-tab-pane label="自定义角色" name="customRole">
           <div class='header'>
-            <el-button type='primary'>新增角色</el-button>
+            <el-button type='primary' @click="addNewRole">新增角色</el-button>
             <el-input
               type='text'
               prefix-icon="el-icon-search"
@@ -96,7 +97,8 @@
                 <el-button
                   size='small'
                   :plain='true'
-                  type='warning'>
+                  type='warning'
+                  @click="handleEditRole">
                   编辑
                 </el-button>
                 <el-button
@@ -149,11 +151,84 @@
         <PermissionManager/>
       </el-dialog>
     </div>
+    <!-- 查看用户弹窗 -->
+    <div class="checkUserDialog">
+      <el-dialog
+        title="用户列表"
+        :visible.sync="checkUserDialog"
+        width="600px"
+        :close-on-click-modal="false"
+        @close="closeCheckUserDialog">
+        <el-divider></el-divider>
+        <div class="searchBox">
+          <span>姓名</span>
+          <el-input
+            size="small"
+            v-model.trim="inputUserName">
+          </el-input>
+          <span>手机号码</span>
+          <el-input
+            size="small"
+            v-model.trim="inputUserPhone">
+          </el-input>
+        </div>
+        <el-table :data="checkUser.users" style="width: 100%">
+          <el-table-column label='序号' type='index' width='80px'>
+          </el-table-column>
+          <el-table-column label="姓名" min-width="22%">
+            <template slot-scope="scope">
+              <span>{{ scope.row.realName }}</span>
+            </template>
+          </el-table-column>
+          <el-table-column label="所属部门" min-width="22%">
+            <template slot-scope="scope">
+              <span>{{ scope.row.department }}</span>
+            </template>
+          </el-table-column>
+          <el-table-column label="手机号"  min-width="22%">
+            <template slot-scope="scope">
+              <span>{{ scope.row.phone }}</span>
+            </template>
+          </el-table-column>
+          <el-table-column label="操作" min-width="33.3%"> 
+            <template slot-scope="scope">
+              <el-button 
+                size="mini" 
+                :plain="true" 
+                type="danger">
+                删除
+              </el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+        <el-pagination
+          background
+          layout="total, prev, pager, next, jumper"
+          :page-size="5"
+          :total="checkUser.totalNum"
+          small
+          @current-change="handleCurrentUserChange"
+          @size-change="handleUserSizeChange"
+          @prev-click="gotoUserPrevPage"
+          @next-click="gotoUserNextPage">
+        </el-pagination>
+      </el-dialog>  
+    </div>
+    <!-- 新建、编辑角色弹窗 -->
+    <div>
+      <Rightsdialog 
+        :title="rightsDialogTitle" 
+        :show.sync="newAndEditRoleDialog" 
+        @confirm="confirm" 
+        ref="dialog">
+      </Rightsdialog>
+    </div>
   </div>  
 </template>
 
 <script>
   import PermissionManager from '@/components/PermissionManager/index.vue';
+  import Rightsdialog from "@/components/Rightsdialog/index.vue";
   import { deleteData } from '@/utils/delete-data';
   export default {
     data() {
@@ -175,7 +250,12 @@
         ],
         activeCustomRoleName: 'customRole',
         customRoleData: {
-          data: [],
+          data: [{
+            roleName: '张三',
+            description: '哈哈哈哈',
+            status: 0,
+            updateTime: '2019-1-60'
+          }],
           pageNum: 1,
           pageSize: 20,
           currentPage: 1,
@@ -183,18 +263,18 @@
         },
         inputAddRoleName: '',
         customRoleTableHeight: '',
+        inputUserName: '',
+        inputUserPhone: '',
         checkUser: {
-          title: '管理员-用户列表',
-          user: [
-            {
-              name: '张三',
-              department: '一部',
-              phoneNum: 12345678912,
-              operation: ['delete']
-            }
-          ],
-          totalPage: 4
+          title: '用户列表',
+          users: [],
+          belongsToRole: {},
+          pageNum: 1,
+          pageSize: 5,
+          totalNum: 0
         },
+        newAndEditRoleDialog: false,
+        rightsDialogTitle: '',
         checkUserDialog: false,
         checkPermissionDialog: false,
         isEditPermission: false,
@@ -205,7 +285,8 @@
     watch: {
     },
     components: {
-      PermissionManager
+      PermissionManager,
+      Rightsdialog
     },
     mounted() {
       const windowHeight = window.innerHeight;
@@ -243,10 +324,36 @@
       handleCheckPermission() {
         this.checkPermissionDialog = true;
       },
+      /**
+       * @description 默认角色以及自定义角色---查看对应的用户
+       */
+      handleCheckUsers() {
+        this.checkUserDialog = true;
+      },
+      closeCheckUserDialog() {
+
+      },
+      /**
+       * @description 自定义角色---编辑角色
+       */
+      handleEditRole() {
+        this.newAndEditRoleDialog = true;
+        this.rightsDialogTitle = '角色编辑';
+      },
+      // 自定义角色---新增角色
+      addNewRole() {
+        this.newAndEditRoleDialog = true;
+        this.rightsDialogTitle = '角色新增';
+      },
+      confirm() {},
       handleCurrentChange() {},
       handleRoleSizeChange() {},
       gotoPrevPage() {},
-      gotoNextPage() {}
+      gotoNextPage() {},
+      handleCurrentUserChange() {},
+      handleUserSizeChange() {},
+      gotoUserPrevPage() {},
+      gotoUserNextPage() {}
     }
   }
 </script>
@@ -272,6 +379,32 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       vertical-align: middle;
+    }
+    .checkUserDialog{
+      position: relative;
+      .el-pagination {
+        margin-top: 10px;
+        .el-pagination__total{
+          margin-left: 25%;
+        }
+        .el-pagination__jump {
+          .el-input {
+            width: 50px;
+          }
+        }
+      }
+      .el-table .has-gutter tr {
+        background: white;
+      }
+      .searchBox {
+        span {
+          margin: 0 17px;
+          font-size: 13px;
+        }
+        .el-input {
+          width: 195px;
+        }
+      }
     }
   }
 </style>

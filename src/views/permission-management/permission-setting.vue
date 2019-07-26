@@ -13,7 +13,9 @@
                   <ul class="allRolesContainer">
                     <li 
                       v-for="(item, index) in allRoles.roleName"
-                      :key="index">
+                      :key="index"
+                      :class='{blueBack:index === number}'
+                      @click="handleSettingPermission(index)">
                       {{item}}
                     </li>
                   </ul>
@@ -48,16 +50,25 @@ export default {
     return {
       activeName: 'permissionSetting',
       allRoles: {
-        roleName: [],
+        roleName: ['张三', '李四', '王五'],
         roleCode: []
       },
       currentEmpowermentRoleName: '默认角色',
-      
+      number: 0
     }
   },
   components: {},
-  mounted() {},
-  methods: {}
+  mounted() {
+  },
+  methods: {
+    /**
+     * @description 切换用户查询当前用户所拥有的权限
+     * @param index 用户下标
+     */
+    handleSettingPermission(index) {
+      this.number = index;
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -102,13 +113,14 @@ export default {
             padding: 10px 0;
             text-align: center;
             font-size: 13px;
-            &:hover {
-              background: #f5f7fa;
-              cursor: pointer;
-            }
+            cursor: pointer;
           }
         }
       }
     }
+  }
+  .blueBack {
+    background: #409EFF;
+    color: #fff;
   }
 </style>
